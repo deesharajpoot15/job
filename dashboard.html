@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Dashboard - Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <div class="header-left">
+                <i class="fas fa-briefcase"></i>
+                <h1>Job Search Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="notifications">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </div>
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+                    <span class="user-name">John Doe</span>
+                </div>
+                <button id="logoutBtn" class="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    Logout
+                </button>
+            </div>
+        </header>
+        
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <i class="fas fa-search"></i>
+                <div class="stat-info">
+                    <h3>Jobs Found</h3>
+                    <p class="stat-number">1,234</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-paper-plane"></i>
+                <div class="stat-info">
+                    <h3>Applications</h3>
+                    <p class="stat-number">12</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-bookmark"></i>
+                <div class="stat-info">
+                    <h3>Saved Jobs</h3>
+                    <p class="stat-number">45</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <form id="searchForm">
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="location" placeholder="Location">
+                    </div>
+                    <div class="filter-group">
+                        <i class="fas fa-graduation-cap"></i>
+                        <select id="degree">
+                            <option value="">Select Degree</option>
+                            <option value="bachelors">Bachelor's</option>
+                            <option value="masters">Master's</option>
+                            <option value="phd">PhD</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <i class="fas fa-briefcase"></i>
+                        <input type="text" id="interest" placeholder="Job Interest/Title">
+                    </div>
+                    <div class="filter-group">
+                        <i class="fas fa-chart-line"></i>
+                        <select id="experience">
+                            <option value="">Experience Level</option>
+                            <option value="entry">Entry Level</option>
+                            <option value="mid">Mid Level</option>
+                            <option value="senior">Senior Level</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                        Search Jobs
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="job-listings">
+            <div class="listings-header">
+                <h2>Available Jobs</h2>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th-large"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="jobResults" class="job-results">
+                <!-- Job listings will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
